@@ -15,6 +15,11 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
+    env:
+      MY VAR: "PRESENTACION"
+      nombres: "Beltran"
+      apellidos: "Quispe Salvia"
+      edad: 45
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -32,3 +37,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      # PRESENTACION
+      - name: Impresión de PRESENTACION
+        run: |
+          echo "La variable de entorno es: $MY_VAR"
+          echo "Mi nombre es: ${{env.nombres}}"
+          echo "Mis apellidos son: ${{env.apellidos}}"
+          echo "Mi edad es: ${{env.edad}}"
+
