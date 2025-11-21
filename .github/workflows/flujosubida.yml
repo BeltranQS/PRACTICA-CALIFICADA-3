@@ -22,6 +22,9 @@ jobs:
       edad: 45
 
       datosGerales: "Carrera de Ingeniería de Sistemas"
+
+      user: ${{secrets.USER}} 
+      password: ${{secrets.PASSWORD}}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -53,3 +56,9 @@ jobs:
         run: |
           echo "La variable de entorno es: $MY_VAR"
           echo "Estudiante de : ${{env.datosGerales}}"
+      
+      # VARIABLES DE ENTORNO SECRETAS
+      - name: Impresión de VARIABLES DE ENTORNO SECRETAS
+        run: |
+          echo "Estudiante de : ${{env.user}}"
+          echo "Estudiante de : ${{env.password}}"
