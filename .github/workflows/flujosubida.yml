@@ -62,3 +62,8 @@ jobs:
         run: |
           echo "Estudiante de : ${{env.user}}"
           echo "Estudiante de : ${{env.password}}"
+        
+      # VARIABLE ABIERTA
+      - name: Impresión de VARIABLE ABIERTA
+        run: |
+          echo "Estudiante de : ${{env.VERSION_DE_M_PROYECTO}}"
