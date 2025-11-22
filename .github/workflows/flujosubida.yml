@@ -60,10 +60,10 @@ jobs:
       # VARIABLES DE ENTORNO SECRETAS
       - name: Impresión de VARIABLES DE ENTORNO SECRETAS
         run: |
-          echo "Estudiante de : ${{env.user}}"
-          echo "Estudiante de : ${{env.password}}"
+          echo "Usuario : ${{env.user}}"
+          echo "Contraseña : ${{env.password}}"
         
       # VARIABLE ABIERTA
       - name: Impresión de VARIABLE ABIERTA
         run: |
-          echo "Estudiante de : ${{vars.VERSION_DE_MI_PROYECTO}}"
+          echo "Vesion de mi proyecto : ${{vars.VERSION_DE_MI_PROYECTO}}"
